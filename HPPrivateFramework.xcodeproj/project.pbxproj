@@ -1,0 +1,421 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63A494111C3A512700E1AEE6 /* HPPrivateFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A494101C3A512700E1AEE6 /* HPPrivateFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63A494181C3A512700E1AEE6 /* HPPrivateFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A4940D1C3A512700E1AEE6 /* HPPrivateFramework.framework */; };
+		63A4941D1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A4941C1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m */; };
+		63A4942A1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A494281C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h */; };
+		63A4942B1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A494291C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m */; };
+		63A4942F1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c in Sources */ = {isa = PBXBuildFile; fileRef = 63A4942D1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c */; };
+		63A494301C3A523A00E1AEE6 /* CACustomedTimingAddtions.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A4942E1C3A523A00E1AEE6 /* CACustomedTimingAddtions.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63A494191C3A512700E1AEE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63A494041C3A512700E1AEE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63A4940C1C3A512700E1AEE6;
+			remoteInfo = HPPrivateFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63A4940D1C3A512700E1AEE6 /* HPPrivateFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPPrivateFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A494101C3A512700E1AEE6 /* HPPrivateFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPrivateFramework.h; sourceTree = "<group>"; };
+		63A494121C3A512700E1AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63A494171C3A512700E1AEE6 /* HPPrivateFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPPrivateFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A4941C1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPrivateFrameworkTests.m; sourceTree = "<group>"; };
+		63A4941E1C3A512700E1AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63A494281C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+CustomedTimingAnimation.h"; sourceTree = "<group>"; };
+		63A494291C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+CustomedTimingAnimation.m"; sourceTree = "<group>"; };
+		63A4942D1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CACustomedTimingAddtions.c; sourceTree = "<group>"; };
+		63A4942E1C3A523A00E1AEE6 /* CACustomedTimingAddtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACustomedTimingAddtions.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63A494091C3A512700E1AEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63A494141C3A512700E1AEE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A494181C3A512700E1AEE6 /* HPPrivateFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63A494031C3A512700E1AEE6 = {
+			isa = PBXGroup;
+			children = (
+				63A4940F1C3A512700E1AEE6 /* HPPrivateFramework */,
+				63A4941B1C3A512700E1AEE6 /* HPPrivateFrameworkTests */,
+				63A4940E1C3A512700E1AEE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63A4940E1C3A512700E1AEE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63A4940D1C3A512700E1AEE6 /* HPPrivateFramework.framework */,
+				63A494171C3A512700E1AEE6 /* HPPrivateFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63A4940F1C3A512700E1AEE6 /* HPPrivateFramework */ = {
+			isa = PBXGroup;
+			children = (
+				63A4942C1C3A523A00E1AEE6 /* supports */,
+				63A494271C3A522D00E1AEE6 /* Categories */,
+				63A494101C3A512700E1AEE6 /* HPPrivateFramework.h */,
+				63A494121C3A512700E1AEE6 /* Info.plist */,
+			);
+			path = HPPrivateFramework;
+			sourceTree = "<group>";
+		};
+		63A4941B1C3A512700E1AEE6 /* HPPrivateFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				63A4941C1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m */,
+				63A4941E1C3A512700E1AEE6 /* Info.plist */,
+			);
+			path = HPPrivateFrameworkTests;
+			sourceTree = "<group>";
+		};
+		63A494271C3A522D00E1AEE6 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				63A494281C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h */,
+				63A494291C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		63A4942C1C3A523A00E1AEE6 /* supports */ = {
+			isa = PBXGroup;
+			children = (
+				63A4942E1C3A523A00E1AEE6 /* CACustomedTimingAddtions.h */,
+				63A4942D1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c */,
+			);
+			path = supports;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		63A4940A1C3A512700E1AEE6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A4942A1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h in Headers */,
+				63A494301C3A523A00E1AEE6 /* CACustomedTimingAddtions.h in Headers */,
+				63A494111C3A512700E1AEE6 /* HPPrivateFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		63A4940C1C3A512700E1AEE6 /* HPPrivateFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63A494211C3A512700E1AEE6 /* Build configuration list for PBXNativeTarget "HPPrivateFramework" */;
+			buildPhases = (
+				63A494081C3A512700E1AEE6 /* Sources */,
+				63A494091C3A512700E1AEE6 /* Frameworks */,
+				63A4940A1C3A512700E1AEE6 /* Headers */,
+				63A4940B1C3A512700E1AEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HPPrivateFramework;
+			productName = HPPrivateFramework;
+			productReference = 63A4940D1C3A512700E1AEE6 /* HPPrivateFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		63A494161C3A512700E1AEE6 /* HPPrivateFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63A494241C3A512700E1AEE6 /* Build configuration list for PBXNativeTarget "HPPrivateFrameworkTests" */;
+			buildPhases = (
+				63A494131C3A512700E1AEE6 /* Sources */,
+				63A494141C3A512700E1AEE6 /* Frameworks */,
+				63A494151C3A512700E1AEE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63A4941A1C3A512700E1AEE6 /* PBXTargetDependency */,
+			);
+			name = HPPrivateFrameworkTests;
+			productName = HPPrivateFrameworkTests;
+			productReference = 63A494171C3A512700E1AEE6 /* HPPrivateFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63A494041C3A512700E1AEE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = BONC;
+				TargetAttributes = {
+					63A4940C1C3A512700E1AEE6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					63A494161C3A512700E1AEE6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 63A494071C3A512700E1AEE6 /* Build configuration list for PBXProject "HPPrivateFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63A494031C3A512700E1AEE6;
+			productRefGroup = 63A4940E1C3A512700E1AEE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63A4940C1C3A512700E1AEE6 /* HPPrivateFramework */,
+				63A494161C3A512700E1AEE6 /* HPPrivateFrameworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63A4940B1C3A512700E1AEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63A494151C3A512700E1AEE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63A494081C3A512700E1AEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A4942B1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m in Sources */,
+				63A4942F1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63A494131C3A512700E1AEE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A4941D1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63A4941A1C3A512700E1AEE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63A4940C1C3A512700E1AEE6 /* HPPrivateFramework */;
+			targetProxy = 63A494191C3A512700E1AEE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		63A4941F1C3A512700E1AEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63A494201C3A512700E1AEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		63A494221C3A512700E1AEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HPPrivateFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonc.HPPrivateFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		63A494231C3A512700E1AEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HPPrivateFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonc.HPPrivateFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		63A494251C3A512700E1AEE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HPPrivateFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonc.HPPrivateFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63A494261C3A512700E1AEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HPPrivateFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bonc.HPPrivateFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63A494071C3A512700E1AEE6 /* Build configuration list for PBXProject "HPPrivateFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A4941F1C3A512700E1AEE6 /* Debug */,
+				63A494201C3A512700E1AEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63A494211C3A512700E1AEE6 /* Build configuration list for PBXNativeTarget "HPPrivateFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A494221C3A512700E1AEE6 /* Debug */,
+				63A494231C3A512700E1AEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63A494241C3A512700E1AEE6 /* Build configuration list for PBXNativeTarget "HPPrivateFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A494251C3A512700E1AEE6 /* Debug */,
+				63A494261C3A512700E1AEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63A494041C3A512700E1AEE6 /* Project object */;
+}
