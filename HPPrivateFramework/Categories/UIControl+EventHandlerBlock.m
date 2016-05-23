@@ -10,26 +10,26 @@
 #import <objc/runtime.h>
 
 #pragma mark - event selector name table
-static  const NSString* kEventTouchDown=@"eventTouchDownHandler";
-static  const NSString* kEventTouchDownRepeat=@"eventTouchDownRepeatHandler";
-static  const NSString* kEventTouchDragInside=@"eventTouchDragInsideHandler";
-static  const NSString* kEventTouchDragOutside=@"eventTouchDragOutsideHandler";
-static  const NSString* kEventTouchDragEnter=@"eventTouchDragEnterHandler";
-static  const NSString* kEventTouchDragExit=@"eventTouchDragExitHandler";
-static  const NSString* kEventTouchUpInside=@"eventTouchUpInsideHandler";
-static  const NSString* kEventTouchUpOutside=@"eventTouchUpOutsideHandler";
-static  const NSString* kEventTouchCancel=@"eventTouchCancelHandler";
-static  const NSString* kEventValueChanged=@"eventValueChangedHandler";
-static  const NSString* kEventPrimaryActionTriggered=@"eventPrimaryActionTriggeredHandler";
-static  const NSString* kEventEditingDidBegin=@"eventEditingDidBeginHandler";
-static  const NSString* kEventEditingChanged=@"eventEditingChangedHandler";
-static  const NSString* kEventEditingDidEnd=@"eventEditingDidEndHandler";
-static  const NSString* kEventEditingDidEndOnExit=@"eventEditingDidEndOnExitHandler";
-static  const NSString* kEventAllTouchEvents=@"eventAllTouchEventsHandler";
-static  const NSString* kEventAllEditingEvents=@"eventAllEditingEventsHandler";
-static  const NSString* kEventApplicationReserved=@"eventApplicationReservedHandler";
-static  const NSString* kEventSystemReserved=@"eventSystemReservedHandler";
-static  const NSString* kEventAllEvents=@"eventAllEventsHandler";
+const NSString* kEventTouchDown=@"eventTouchDownHandler";
+const NSString* kEventTouchDownRepeat=@"eventTouchDownRepeatHandler";
+const NSString* kEventTouchDragInside=@"eventTouchDragInsideHandler";
+const NSString* kEventTouchDragOutside=@"eventTouchDragOutsideHandler";
+const NSString* kEventTouchDragEnter=@"eventTouchDragEnterHandler";
+const NSString* kEventTouchDragExit=@"eventTouchDragExitHandler";
+const NSString* kEventTouchUpInside=@"eventTouchUpInsideHandler";
+const NSString* kEventTouchUpOutside=@"eventTouchUpOutsideHandler";
+const NSString* kEventTouchCancel=@"eventTouchCancelHandler";
+const NSString* kEventValueChanged=@"eventValueChangedHandler";
+const NSString* kEventPrimaryActionTriggered=@"eventPrimaryActionTriggeredHandler";
+const NSString* kEventEditingDidBegin=@"eventEditingDidBeginHandler";
+const NSString* kEventEditingChanged=@"eventEditingChangedHandler";
+const NSString* kEventEditingDidEnd=@"eventEditingDidEndHandler";
+const NSString* kEventEditingDidEndOnExit=@"eventEditingDidEndOnExitHandler";
+const NSString* kEventAllTouchEvents=@"eventAllTouchEventsHandler";
+const NSString* kEventAllEditingEvents=@"eventAllEditingEventsHandler";
+const NSString* kEventApplicationReserved=@"eventApplicationReservedHandler";
+const NSString* kEventSystemReserved=@"eventSystemReservedHandler";
+const NSString* kEventAllEvents=@"eventAllEventsHandler";
 
 @implementation UIControl(EventHandlerBlock)
 

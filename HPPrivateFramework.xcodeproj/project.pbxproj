@@ -10,10 +10,12 @@
 		63A494111C3A512700E1AEE6 /* HPPrivateFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A494101C3A512700E1AEE6 /* HPPrivateFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63A494181C3A512700E1AEE6 /* HPPrivateFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A4940D1C3A512700E1AEE6 /* HPPrivateFramework.framework */; };
 		63A4941D1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A4941C1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m */; };
-		63A4942A1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A494281C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h */; };
+		63A4942A1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A494281C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63A4942B1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A494291C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m */; };
 		63A4942F1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c in Sources */ = {isa = PBXBuildFile; fileRef = 63A4942D1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c */; };
 		63A494301C3A523A00E1AEE6 /* CACustomedTimingAddtions.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A4942E1C3A523A00E1AEE6 /* CACustomedTimingAddtions.h */; };
+		63EE86411CEDA5D4008B076E /* UIControl+EventHandlerBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EE863F1CEDA5D4008B076E /* UIControl+EventHandlerBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63EE86421CEDA5D4008B076E /* UIControl+EventHandlerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE86401CEDA5D4008B076E /* UIControl+EventHandlerBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		63A494291C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+CustomedTimingAnimation.m"; sourceTree = "<group>"; };
 		63A4942D1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CACustomedTimingAddtions.c; sourceTree = "<group>"; };
 		63A4942E1C3A523A00E1AEE6 /* CACustomedTimingAddtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACustomedTimingAddtions.h; sourceTree = "<group>"; };
+		63EE863F1CEDA5D4008B076E /* UIControl+EventHandlerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+EventHandlerBlock.h"; sourceTree = "<group>"; };
+		63EE86401CEDA5D4008B076E /* UIControl+EventHandlerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+EventHandlerBlock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		63A494271C3A522D00E1AEE6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				63EE863F1CEDA5D4008B076E /* UIControl+EventHandlerBlock.h */,
+				63EE86401CEDA5D4008B076E /* UIControl+EventHandlerBlock.m */,
 				63A494281C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h */,
 				63A494291C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m */,
 			);
@@ -121,9 +127,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EE86411CEDA5D4008B076E /* UIControl+EventHandlerBlock.h in Headers */,
 				63A4942A1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h in Headers */,
-				63A494301C3A523A00E1AEE6 /* CACustomedTimingAddtions.h in Headers */,
 				63A494111C3A512700E1AEE6 /* HPPrivateFramework.h in Headers */,
+				63A494301C3A523A00E1AEE6 /* CACustomedTimingAddtions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63A4942B1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m in Sources */,
+				63EE86421CEDA5D4008B076E /* UIControl+EventHandlerBlock.m in Sources */,
 				63A4942F1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,11 +292,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -325,11 +334,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -338,6 +348,10 @@
 		63A494221C3A512700E1AEE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -345,15 +359,21 @@
 				INFOPLIST_FILE = HPPrivateFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonc.HPPrivateFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
 			};
 			name = Debug;
 		};
 		63A494231C3A512700E1AEE6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -361,9 +381,11 @@
 				INFOPLIST_FILE = HPPrivateFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonc.HPPrivateFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -406,6 +428,7 @@
 				63A494231C3A512700E1AEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63A494241C3A512700E1AEE6 /* Build configuration list for PBXNativeTarget "HPPrivateFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +437,7 @@
 				63A494261C3A512700E1AEE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

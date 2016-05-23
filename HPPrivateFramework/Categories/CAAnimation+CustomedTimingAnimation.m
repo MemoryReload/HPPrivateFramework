@@ -7,43 +7,90 @@
 //
 
 #import "CAAnimation+CustomedTimingAnimation.h"
+#import "CACustomedTimingAddtions.h"
 
 #if !defined(CACustomedframeCountPerSecond)
 // The larger this number, the smoother the animation
 #define CACustomedframeCountPerSecond 60
 #endif
 
-float interpolate(float from,float to ,float time);
-float interpolateWithDeta(float from,float deta,float time);
-id interpolateValue(id fromValue,id toValue,float time);
-void CGColorGetRGBComponents(CGFloat* components, CGColorRef color);
+// Linear interpolation (no easing)
+const CACustomedTimingFuction CACustomedTimingFuctionLinear=&LinearInterpolation;
 
-@implementation CAAnimation(CustomedTimingAnimation)
+// Quadratic easing; p^2
+const CACustomedTimingFuction CACustomedTimingFuctionQuadraticEaseIn=&QuadraticEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionQuadraticEaseOut=&QuadraticEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionQuadraticEaseInOut=&QuadraticEaseInOut;
 
-+(CAAnimation*)animationWithKeyPath:(NSString*)keyPath  fromValue:(id)fromValue   toValue:(id)toValue customedTimingFuction:(CACustomedTimingFuction)timingFuction  duration:(CFTimeInterval)duration
-{
-    //create key frames array
-    NSInteger frameNums=round(duration*CACustomedframeCountPerSecond);
-    NSMutableArray* framesArray=[[NSMutableArray alloc] init];
-    for (NSInteger i=0; i<frameNums; i++) {
-        CGFloat time=1.0f/(frameNums-1)*i;
-        if (!timingFuction) {
-            timingFuction=kCACustomedTimingFuctionLinear;
-        }
-        time=timingFuction(time);
-        NSValue* value=interpolateValue(fromValue, toValue, time);
-        [framesArray addObject:value];
-    }
+// Cubic easing; p^3
+const CACustomedTimingFuction CACustomedTimingFuctionCubicEaseIn=&CubicEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionCubicEaseOut=&CubicEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionCubicEaseInOut=CubicEaseInOut;
+
+// Quartic easing; p^4
+const CACustomedTimingFuction CACustomedTimingFuctionQuarticEaseIn=&QuarticEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionQuarticEaseOut=&QuarticEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionQuarticEaseInOut=&QuarticEaseInOut;
+
+// Quintic easing; p^5
+const CACustomedTimingFuction CACustomedTimingFuctionQuinticEaseIn=&QuinticEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionQuinticEaseOut=&QuinticEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionQuinticEaseInOut=&QuinticEaseInOut;
+
+// Sine wave easing; sin(p * PI/2)
+const CACustomedTimingFuction CACustomedTimingFuctionSineEaseIn=&SineEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionSineEaseOut=&SineEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionSineEaseInOut=&SineEaseInOut;
+
+// Circular easing; sqrt(1 - p^2)
+const CACustomedTimingFuction CACustomedTimingFuctionCircularEaseIn=&CircularEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionCircularEaseOut=&CircularEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionCircularEaseInOut=&CircularEaseInOut;
+
+// Exponential easing, base 2
+const CACustomedTimingFuction CACustomedTimingFuctionExponentialEaseIn=&ExponentialEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionExponentialEaseOut=&ExponentialEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionExponentialEaseInOut=&ExponentialEaseInOut;
+
+// Exponentially-damped sine wave easing
+const CACustomedTimingFuction CACustomedTimingFuctionElasticEaseIn=&ElasticEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionElasticEaseOut=&ElasticEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionElasticEaseInOut=&ElasticEaseInOut;
+
+// Overshooting cubic easing;
+const CACustomedTimingFuction CACustomedTimingFuctionBackEaseIn=&BackEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionBackEaseOut=&BackEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionBackEaseInOut=&BackEaseInOut;
+
+// Exponentially-decaying bounce easing
+const CACustomedTimingFuction CACustomedTimingFuctionBounceEaseIn=&BounceEaseIn;
+const CACustomedTimingFuction CACustomedTimingFuctionBounceEaseOut=&BounceEaseOut;
+const CACustomedTimingFuction CACustomedTimingFuctionBounceEaseInOut=&BounceEaseInOut;
+
+#pragma mark - Tool Functions
+
+//颜色空间转换
+void CGColorGetRGBComponents(CGFloat* components, CGColorRef color) {
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char resultingPixel[4];
+    CGContextRef context = CGBitmapContextCreate(&resultingPixel,
+                                                 1,
+                                                 1,
+                                                 8,
+                                                 4,
+                                                 rgbColorSpace,
+                                                 kCGImageAlphaNoneSkipLast);
+    CGContextSetFillColorWithColor(context, color);
+    CGContextFillRect(context, CGRectMake(0, 0, 1, 1));
+    CGContextRelease(context);
+    CGColorSpaceRelease(rgbColorSpace);
     
-    //create animation
-    CAKeyframeAnimation* keyFrameAnimation=[CAKeyframeAnimation animationWithKeyPath:keyPath];
-    keyFrameAnimation.values=framesArray;
-    keyFrameAnimation.duration=duration;
-    return keyFrameAnimation;
+    for (int component = 0; component < 4; component++) {
+        if (component==3) components[component]=resultingPixel[component];
+        else components[component] = resultingPixel[component] / 255.0f;
+    }
 }
-@end
 
-#pragma mark - 插值算法
 //单值插值计算（初值末值）
 float interpolate(float from,float to ,float time)
 {
@@ -158,79 +205,28 @@ id interpolateValue(id fromValue,id toValue,float time)
     return (time<0.5)?fromValue:toValue;
 }
 
-//颜色空间转换
-void CGColorGetRGBComponents(CGFloat* components, CGColorRef color) {
-    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
-    unsigned char resultingPixel[4];
-    CGContextRef context = CGBitmapContextCreate(&resultingPixel,
-                                                 1,
-                                                 1,
-                                                 8,
-                                                 4,
-                                                 rgbColorSpace,
-                                                 kCGImageAlphaNoneSkipLast);
-    CGContextSetFillColorWithColor(context, color);
-    CGContextFillRect(context, CGRectMake(0, 0, 1, 1));
-    CGContextRelease(context);
-    CGColorSpaceRelease(rgbColorSpace);
-    
-    for (int component = 0; component < 4; component++) {
-        if (component==3) components[component]=resultingPixel[component];
-        else components[component] = resultingPixel[component] / 255.0f;
+#pragma mark - CAAnimation
+@implementation CAAnimation(CustomedTimingAnimation)
+
++(CAAnimation*)animationWithKeyPath:(NSString*)keyPath  fromValue:(id)fromValue   toValue:(id)toValue customedTimingFuction:(CACustomedTimingFuction)timingFuction  duration:(CFTimeInterval)duration
+{
+    //create key frames array
+    NSInteger frameNums=round(duration*CACustomedframeCountPerSecond);
+    NSMutableArray* framesArray=[[NSMutableArray alloc] init];
+    for (NSInteger i=0; i<frameNums; i++) {
+        CGFloat time=1.0f/(frameNums-1)*i;
+        if (!timingFuction) {
+            timingFuction=CACustomedTimingFuctionLinear;
+        }
+        time=timingFuction(time);
+        NSValue* value=interpolateValue(fromValue, toValue, time);
+        [framesArray addObject:value];
     }
+    
+    //create animation
+    CAKeyframeAnimation* keyFrameAnimation=[CAKeyframeAnimation animationWithKeyPath:keyPath];
+    keyFrameAnimation.values=framesArray;
+    keyFrameAnimation.duration=duration;
+    return keyFrameAnimation;
 }
-
-#pragma mark -  Timing Function constants Impementation
-// Linear interpolation (no easing)
-const CACustomedTimingFuction kCACustomedTimingFuctionLinear=&LinearInterpolation;
-
-// Quadratic easing; p^2
-const CACustomedTimingFuction kCACustomedTimingFuctionQuadraticEaseIn=&QuadraticEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionQuadraticEaseOut=&QuadraticEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionQuadraticEaseInOut=&QuadraticEaseInOut;
-
-// Cubic easing; p^3
-const CACustomedTimingFuction kCACustomedTimingFuctionCubicEaseIn=&CubicEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionCubicEaseOut=&CubicEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionCubicEaseInOut=CubicEaseInOut;
-
-// Quartic easing; p^4
-const CACustomedTimingFuction kCACustomedTimingFuctionQuarticEaseIn=&QuarticEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionQuarticEaseOut=&QuarticEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionQuarticEaseInOut=&QuarticEaseInOut;
-
-// Quintic easing; p^5
-const CACustomedTimingFuction kCACustomedTimingFuctionQuinticEaseIn=&QuinticEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionQuinticEaseOut=&QuinticEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionQuinticEaseInOut=&QuinticEaseInOut;
-
-// Sine wave easing; sin(p * PI/2)
-const CACustomedTimingFuction kCACustomedTimingFuctionSineEaseIn=&SineEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionSineEaseOut=&SineEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionSineEaseInOut=&SineEaseInOut;
-
-// Circular easing; sqrt(1 - p^2)
-const CACustomedTimingFuction kCACustomedTimingFuctionCircularEaseIn=&CircularEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionCircularEaseOut=&CircularEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionCircularEaseInOut=&CircularEaseInOut;
-
-// Exponential easing, base 2
-const CACustomedTimingFuction kCACustomedTimingFuctionExponentialEaseIn=&ExponentialEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionExponentialEaseOut=&ExponentialEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionExponentialEaseInOut=&ExponentialEaseInOut;
-
-// Exponentially-damped sine wave easing
-const CACustomedTimingFuction kCACustomedTimingFuctionElasticEaseIn=&ElasticEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionElasticEaseOut=&ElasticEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionElasticEaseInOut=&ElasticEaseInOut;
-
-// Overshooting cubic easing;
-const CACustomedTimingFuction kCACustomedTimingFuctionBackEaseIn=&BackEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionBackEaseOut=&BackEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionBackEaseInOut=&BackEaseInOut;
-
-// Exponentially-decaying bounce easing
-const CACustomedTimingFuction kCACustomedTimingFuctionBounceEaseIn=&BounceEaseIn;
-const CACustomedTimingFuction kCACustomedTimingFuctionBounceEaseOut=&BounceEaseOut;
-const CACustomedTimingFuction kCACustomedTimingFuctionBounceEaseInOut=&BounceEaseInOut;
-
+@end

@@ -17,5 +17,6 @@ FOUNDATION_EXPORT const unsigned char HPPrivateFrameworkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <HPPrivateFramework/PublicHeader.h>
 
 #import <HPPrivateFramework/CAAnimation+CustomedTimingAnimation.h>
+#import <HPPrivateFramework/UIControl+EventHandlerBlock.h>
 
 

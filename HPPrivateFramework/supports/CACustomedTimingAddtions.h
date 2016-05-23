@@ -25,8 +25,6 @@
 extern "C" {
 #endif
     
-    typedef CACFloat (*CustomedTimingFuction)(CACFloat);
-    
     // Linear interpolation (no easing)
     CACFloat LinearInterpolation(CACFloat p);
     
