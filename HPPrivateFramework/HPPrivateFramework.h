@@ -18,5 +18,5 @@ FOUNDATION_EXPORT const unsigned char HPPrivateFrameworkVersionString[];
 
 #import <HPPrivateFramework/CAAnimation+CustomedTimingAnimation.h>
 #import <HPPrivateFramework/UIControl+EventHandlerBlock.h>
-
-
+#import <HPPrivateFramework/HPEncryptionHelper.h>
+#import <HPPrivateFramework/HPGTMBase64.h>
