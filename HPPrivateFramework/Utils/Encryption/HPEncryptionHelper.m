@@ -384,28 +384,6 @@
     if (decryptedBuffer) free(decryptedBuffer);
     
     return [NSData dataWithData:decryptedData];
-    
-//    size_t cipherBufferSize = SecKeyGetBlockSize(key);
-//    size_t keyBufferSize = [data length];
-//    
-//    NSMutableData *bits = [NSMutableData dataWithLength:keyBufferSize];
-//    OSStatus sanityCheck = SecKeyDecrypt(key,
-//                                         kSecPaddingPKCS1,
-//                                         (const uint8_t *) [data bytes],
-//                                         cipherBufferSize,
-//                                         [bits mutableBytes],
-//                                         &keyBufferSize);
-//    
-//    if (sanityCheck != 0) {
-//        NSError *error = [NSError errorWithDomain:NSOSStatusErrorDomain code:sanityCheck userInfo:nil];
-//        NSLog(@"Error: %@", [error description]);
-//    }
-//    
-//    NSAssert(sanityCheck == noErr, @"Error decrypting, OSStatus == %ld.", (long)sanityCheck);
-//    
-//    [bits setLength:keyBufferSize];
-//
-//    return [NSData dataWithData:bits];
 }
 
 +(NSString*)rsaEncryptString:(NSString*)message withKey:(SecKeyRef)key
