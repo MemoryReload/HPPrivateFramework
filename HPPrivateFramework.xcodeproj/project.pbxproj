@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6386655D1D90EF8E00C0F749 /* HPNetworkInfoUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 6386655B1D90EF8E00C0F749 /* HPNetworkInfoUtils.h */; };
+		6386655E1D90EF8E00C0F749 /* HPNetworkInfoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6386655C1D90EF8E00C0F749 /* HPNetworkInfoUtils.m */; };
+		638665661D90EFBB00C0F749 /* getgateway.c in Sources */ = {isa = PBXBuildFile; fileRef = 6386655F1D90EFBB00C0F749 /* getgateway.c */; };
+		638665671D90EFBB00C0F749 /* getgateway.h in Headers */ = {isa = PBXBuildFile; fileRef = 638665601D90EFBB00C0F749 /* getgateway.h */; };
+		638665681D90EFBB00C0F749 /* if_arp.h in Headers */ = {isa = PBXBuildFile; fileRef = 638665611D90EFBB00C0F749 /* if_arp.h */; };
+		638665691D90EFBB00C0F749 /* if_ether.h in Headers */ = {isa = PBXBuildFile; fileRef = 638665621D90EFBB00C0F749 /* if_ether.h */; };
+		6386656A1D90EFBB00C0F749 /* ip2mac.c in Sources */ = {isa = PBXBuildFile; fileRef = 638665631D90EFBB00C0F749 /* ip2mac.c */; };
+		6386656B1D90EFBB00C0F749 /* ip2mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 638665641D90EFBB00C0F749 /* ip2mac.h */; };
+		6386656C1D90EFBB00C0F749 /* route.h in Headers */ = {isa = PBXBuildFile; fileRef = 638665651D90EFBB00C0F749 /* route.h */; };
 		63A494111C3A512700E1AEE6 /* HPPrivateFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A494101C3A512700E1AEE6 /* HPPrivateFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63A494181C3A512700E1AEE6 /* HPPrivateFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A4940D1C3A512700E1AEE6 /* HPPrivateFramework.framework */; };
 		63A4941D1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A4941C1C3A512700E1AEE6 /* HPPrivateFrameworkTests.m */; };
@@ -34,6 +43,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6386655B1D90EF8E00C0F749 /* HPNetworkInfoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNetworkInfoUtils.h; sourceTree = "<group>"; };
+		6386655C1D90EF8E00C0F749 /* HPNetworkInfoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNetworkInfoUtils.m; sourceTree = "<group>"; };
+		6386655F1D90EFBB00C0F749 /* getgateway.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = getgateway.c; sourceTree = "<group>"; };
+		638665601D90EFBB00C0F749 /* getgateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getgateway.h; sourceTree = "<group>"; };
+		638665611D90EFBB00C0F749 /* if_arp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		638665621D90EFBB00C0F749 /* if_ether.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		638665631D90EFBB00C0F749 /* ip2mac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ip2mac.c; sourceTree = "<group>"; };
+		638665641D90EFBB00C0F749 /* ip2mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ip2mac.h; sourceTree = "<group>"; };
+		638665651D90EFBB00C0F749 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
 		63A4940D1C3A512700E1AEE6 /* HPPrivateFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPPrivateFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A494101C3A512700E1AEE6 /* HPPrivateFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPrivateFramework.h; sourceTree = "<group>"; };
 		63A494121C3A512700E1AEE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6386655A1D90EF8E00C0F749 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				6386655B1D90EF8E00C0F749 /* HPNetworkInfoUtils.h */,
+				6386655C1D90EF8E00C0F749 /* HPNetworkInfoUtils.m */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
 		63A494031C3A512700E1AEE6 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +152,13 @@
 		63A4942C1C3A523A00E1AEE6 /* supports */ = {
 			isa = PBXGroup;
 			children = (
+				6386655F1D90EFBB00C0F749 /* getgateway.c */,
+				638665601D90EFBB00C0F749 /* getgateway.h */,
+				638665611D90EFBB00C0F749 /* if_arp.h */,
+				638665621D90EFBB00C0F749 /* if_ether.h */,
+				638665631D90EFBB00C0F749 /* ip2mac.c */,
+				638665641D90EFBB00C0F749 /* ip2mac.h */,
+				638665651D90EFBB00C0F749 /* route.h */,
 				63A4942E1C3A523A00E1AEE6 /* CACustomedTimingAddtions.h */,
 				63A4942D1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c */,
 			);
@@ -134,6 +168,7 @@
 		63E17DE91D34DD3B006DD355 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6386655A1D90EF8E00C0F749 /* Networks */,
 				63E17DEA1D34DD3C006DD355 /* Encryption */,
 			);
 			path = Utils;
@@ -169,9 +204,15 @@
 				63EE86411CEDA5D4008B076E /* UIControl+EventHandlerBlock.h in Headers */,
 				63A4942A1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.h in Headers */,
 				63E17DF41D34DD3D006DD355 /* HPEncryptionHelper.h in Headers */,
+				638665671D90EFBB00C0F749 /* getgateway.h in Headers */,
 				63E17DF11D34DD3C006DD355 /* HPGTMBase64.h in Headers */,
+				638665681D90EFBB00C0F749 /* if_arp.h in Headers */,
+				6386656C1D90EFBB00C0F749 /* route.h in Headers */,
 				63E17DF31D34DD3D006DD355 /* HPGTMDefines.h in Headers */,
 				63A494111C3A512700E1AEE6 /* HPPrivateFramework.h in Headers */,
+				6386655D1D90EF8E00C0F749 /* HPNetworkInfoUtils.h in Headers */,
+				638665691D90EFBB00C0F749 /* if_ether.h in Headers */,
+				6386656B1D90EFBB00C0F749 /* ip2mac.h in Headers */,
 				63A494301C3A523A00E1AEE6 /* CACustomedTimingAddtions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E17DF51D34DD3D006DD355 /* HPEncryptionHelper.m in Sources */,
+				6386655E1D90EF8E00C0F749 /* HPNetworkInfoUtils.m in Sources */,
 				63A4942B1C3A522D00E1AEE6 /* CAAnimation+CustomedTimingAnimation.m in Sources */,
 				63E17DF21D34DD3D006DD355 /* HPGTMBase64.m in Sources */,
+				638665661D90EFBB00C0F749 /* getgateway.c in Sources */,
+				6386656A1D90EFBB00C0F749 /* ip2mac.c in Sources */,
 				63EE86421CEDA5D4008B076E /* UIControl+EventHandlerBlock.m in Sources */,
 				63A4942F1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c in Sources */,
 			);
