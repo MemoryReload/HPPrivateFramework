@@ -142,7 +142,7 @@
     
     char key[keyLen];
     bzero(key, keyLen);
-    [keyData getBytes:key length:keyData.length];
+    [keyData getBytes:key length:keyLen];
     
     /*According to the documentation, the output data length is no more than its own length plus the block size*/
     size_t bufferSize=data.length+blockSize;
@@ -155,6 +155,8 @@
     if (encryptStatus==kCCSuccess) {
         resultData=[NSData dataWithBytes:buffer length:encrytedLen];
     }
+    free(buffer);//free the buffer;
+    
     return resultData;
 }
 
@@ -166,7 +168,7 @@
     
     char key[keyLen];
     bzero(key, keyLen);
-    [keyData getBytes:key length:keyData.length];
+    [keyData getBytes:key length:keyLen];
     
     /*According to the documentation, the output data length is no more than its own length plus the block size*/
     size_t bufferSize=data.length+blockSize;
@@ -179,6 +181,9 @@
     if (encryptStatus==kCCSuccess) {
         resultData=[NSData dataWithBytes:buffer length:encrytedLen];
     }
+    
+    free(buffer);//free the buffer;
+    
     return resultData;
 }
 
