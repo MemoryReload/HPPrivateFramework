@@ -6,8 +6,8 @@
 //  Copyright © 2015年 BONC. All rights reserved.
 //
 
-#import "CAAnimation+CustomedTimingAnimation.h"
-#import "CACustomedTimingAddtions.h"
+#import <HPPrivateFramework/CAAnimation+CustomedTimingAnimation.h>
+#import <HPPrivateFramework/CACustomedTimingAddtions.h>
 
 #if !defined(CACustomedframeCountPerSecond)
 // The larger this number, the smoother the animation

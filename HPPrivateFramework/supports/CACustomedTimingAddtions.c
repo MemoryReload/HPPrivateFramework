@@ -6,7 +6,7 @@
 //  Copyright © 2015年 BONC. All rights reserved.
 //
 
-#include "CACustomedTimingAddtions.h"
+#include <HPPrivateFramework/CACustomedTimingAddtions.h>
 #include <math.h>
 
 // Modeled after the line y = x

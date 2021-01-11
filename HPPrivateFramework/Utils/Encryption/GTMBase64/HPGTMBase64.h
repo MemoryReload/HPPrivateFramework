@@ -23,7 +23,6 @@
 
 
 #import <Foundation/Foundation.h>
-#import "HPGTMDefines.h"
 
 // GTMBase64
 //

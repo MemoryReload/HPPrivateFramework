@@ -7,6 +7,7 @@
 //
 
 #import "HPEncryptionHelper.h"
+#import <HPPrivateFramework/HPGTMBase64.h>
 
 @implementation HPEncryptionHelper
 

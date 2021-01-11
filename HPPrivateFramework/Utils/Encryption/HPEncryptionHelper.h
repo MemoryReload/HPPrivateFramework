@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCrypto.h>
 #import <Security/Security.h>
-#import "HPGTMBase64.h"
 
 typedef NS_ENUM(NSUInteger, AESKeySizeOption) {
     kAESKeySizeOption128=kCCKeySizeAES128,

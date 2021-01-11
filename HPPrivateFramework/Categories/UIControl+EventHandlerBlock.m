@@ -5,8 +5,7 @@
 //  Created by Heping on 5/12/16.
 //  Copyright © 2016 BONC. All rights reserved.
 //
-
-#import "UIControl+EventHandlerBlock.h"
+#import <HPPrivateFramework/UIControl+EventHandlerBlock.h>
 #import <objc/runtime.h>
 
 #pragma mark - event selector name table
