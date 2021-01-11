@@ -1,2 +1,5 @@
 #ignore the library binaries
 *.a
+#user data
+xcuserdata
+xcshareddata
