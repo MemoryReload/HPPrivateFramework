@@ -28,6 +28,8 @@
 		63E17DF31D34DD3D006DD355 /* HPGTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E17DEE1D34DD3C006DD355 /* HPGTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63E17DF41D34DD3D006DD355 /* HPEncryptionHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E17DEF1D34DD3C006DD355 /* HPEncryptionHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63E17DF51D34DD3D006DD355 /* HPEncryptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E17DF01D34DD3C006DD355 /* HPEncryptionHelper.m */; };
+		63E2ED1A260759EE003E7886 /* runtimeUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E2ED18260759EE003E7886 /* runtimeUtils.h */; };
+		63E2ED1B260759EE003E7886 /* runtimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E2ED19260759EE003E7886 /* runtimeUtils.m */; };
 		63EE86411CEDA5D4008B076E /* UIControl+EventHandlerBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EE863F1CEDA5D4008B076E /* UIControl+EventHandlerBlock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63EE86421CEDA5D4008B076E /* UIControl+EventHandlerBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 63EE86401CEDA5D4008B076E /* UIControl+EventHandlerBlock.m */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		63E17DEE1D34DD3C006DD355 /* HPGTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGTMDefines.h; sourceTree = "<group>"; };
 		63E17DEF1D34DD3C006DD355 /* HPEncryptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPEncryptionHelper.h; sourceTree = "<group>"; };
 		63E17DF01D34DD3C006DD355 /* HPEncryptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPEncryptionHelper.m; sourceTree = "<group>"; };
+		63E2ED18260759EE003E7886 /* runtimeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runtimeUtils.h; sourceTree = "<group>"; };
+		63E2ED19260759EE003E7886 /* runtimeUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = runtimeUtils.m; sourceTree = "<group>"; };
 		63EE863F1CEDA5D4008B076E /* UIControl+EventHandlerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+EventHandlerBlock.h"; sourceTree = "<group>"; };
 		63EE86401CEDA5D4008B076E /* UIControl+EventHandlerBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+EventHandlerBlock.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +174,8 @@
 			children = (
 				6386655A1D90EF8E00C0F749 /* Networks */,
 				63E17DEA1D34DD3C006DD355 /* Encryption */,
+				63E2ED18260759EE003E7886 /* runtimeUtils.h */,
+				63E2ED19260759EE003E7886 /* runtimeUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 				63A494111C3A512700E1AEE6 /* HPPrivateFramework.h in Headers */,
 				6386655D1D90EF8E00C0F749 /* HPNetworkInfoUtils.h in Headers */,
 				638665691D90EFBB00C0F749 /* if_ether.h in Headers */,
+				63E2ED1A260759EE003E7886 /* runtimeUtils.h in Headers */,
 				6386656B1D90EFBB00C0F749 /* ip2mac.h in Headers */,
 				63A494301C3A523A00E1AEE6 /* CACustomedTimingAddtions.h in Headers */,
 			);
@@ -322,6 +329,7 @@
 				638665661D90EFBB00C0F749 /* getgateway.c in Sources */,
 				6386656A1D90EFBB00C0F749 /* ip2mac.c in Sources */,
 				63EE86421CEDA5D4008B076E /* UIControl+EventHandlerBlock.m in Sources */,
+				63E2ED1B260759EE003E7886 /* runtimeUtils.m in Sources */,
 				63A4942F1C3A523A00E1AEE6 /* CACustomedTimingAddtions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
